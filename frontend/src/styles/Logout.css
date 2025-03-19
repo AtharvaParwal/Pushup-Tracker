@@ -1,0 +1,93 @@
+/* .logout-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .logout-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .buttons button:first-child {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .buttons button:last-child {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .buttons button:hover {
+    opacity: 0.9;
+  } */
+
+  /* Full-screen background, keeping App.css background */
+.logout-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height */
+}
+
+/* White container for Logout */
+.logout-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 400px; /* Fixed width */
+}
+
+/* Heading styling */
+.logout-container h2 {
+  margin-bottom: 20px;
+}
+
+/* Buttons container */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Button styles */
+.buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+/* Red button (Yes) */
+.buttons button:first-child {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Blue button (No) */
+.buttons button:last-child {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Hover effect */
+.buttons button:hover {
+  opacity: 0.9;
+}

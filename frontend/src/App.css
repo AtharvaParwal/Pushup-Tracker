@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background:radial-gradient(circle,rgb(101, 64, 214),rgb(0, 255, 119));
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.video-feed {
+  width: 640px;
+  height: 480px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.stats p {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.start-btn, .rest-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.start-btn:hover {
+  background-color: #218838;
+}
+
+.rest-btn {
+  background-color: #dc3545;
+}
+
+.rest-btn:hover {
+  background-color: #c82333;
+}
+
+.loading-text {
+  font-size: 16px;
+  color: #888;
+} */
