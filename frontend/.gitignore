@@ -9,6 +9,9 @@ coverage/
 # Production build
 build/
 
+nginx.conf
+
+
 # Environment variables
 .env
 .env.local
