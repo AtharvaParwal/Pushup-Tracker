@@ -28,6 +28,12 @@ app.use(
 );
 app.use(express.json());
 
+
+// **Default Route**
+app.get("/", (req, res) => {
+  res.json({ message: "Backend is running!" });
+});
+
 // **Socket.IO Connection**
 io.on("connection", (socket) => {
   console.log(`New client connected: ${socket.id}`);
