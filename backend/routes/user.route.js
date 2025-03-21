@@ -9,7 +9,7 @@ import { getLeaderboard } from "../controllers/user.controller.js";
 const router = express.Router();
 
 router.post("/register", upload.single("avatar"), register);
-router.post("/track-pushups", verifyAccessToken, trackPushups); // Use verifyAccessToken for protection
+router.post("/track-pushups", verifyAccessToken, trackPushups); 
 router.get("/profile", verifyAccessToken, getProfile);
 router.put("/change-password", verifyAccessToken, changePassword);
 router.patch("/avatar", verifyAccessToken, upload.single("avatar"), updateAvatar);

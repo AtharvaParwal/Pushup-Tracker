@@ -6,12 +6,10 @@ export const verifyAccessToken = async (req, res, next) => {
     let token = req.header("Authorization");
     if (!token) throw new ApiError(401, "Unauthorized access");
 
-    // Ensure token starts with "Bearer "
     if (token.startsWith("Bearer ")) {
       token = token.slice(7).trim();
     }
 
-    // Verify the token
     const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
     // console.log("Decoded Token:", decoded); // Debugging
 

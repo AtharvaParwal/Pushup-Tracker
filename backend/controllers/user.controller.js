@@ -27,12 +27,11 @@ const register = asyncHandler(async (req, res) => {
       username,
       email,
       password,
-      avatar: avatar || process.env.DEFAULT_AVATAR, // Set default avatar if none provided
+      avatar: avatar || process.env.DEFAULT_AVATAR, 
   });
 
   const { accessToken, refreshToken } = await generateAccessAndRefreshTokens(user._id);
 
-  // Ensure proper success response format
   return res.status(201).json({
       success: true,
       message: "User registered successfully",
@@ -68,29 +67,23 @@ const changePassword = asyncHandler(async (req, res) => {
 const trackPushups = asyncHandler(async (req, res) => {
   const { pushupCount } = req.body;
 
-  // Validate pushupCount
   if (isNaN(pushupCount) || pushupCount < 0) {
     throw new ApiError(400, "Invalid push-up count. It must be a positive number.");
   }
 
-  // Find user
   const user = await User.findById(req.user.id);
   if (!user) {
     throw new ApiError(404, "User not found");
   }
 
-  // Update push-up count
   user.pushupCount += pushupCount;
 
-  // Update personal best if the current session count exceeds previous best
   if (pushupCount > user.personalBest) {
     user.personalBest = pushupCount;
   }
 
-  // Update level based on new total push-up count
   user.level = calculateLevel(user.pushupCount);
 
-  // Save the updated user
   await user.save();
 
   res.status(200).json(new ApiResponse(200, {
@@ -107,7 +100,6 @@ const getProfile = asyncHandler(async (req, res, next) => {
 
     res.status(200).json(new ApiResponse(200, "Profile fetched", user));
   } catch (error) {
-    // console.error("Error fetching profile:", error);
     return res.status(500).json({ message: "Internal Server Error" });
   }
 });
@@ -212,45 +204,13 @@ const calculateLevel = (pushupCount) => {
     return 0;
 };
 
-// const getLeaderboard = asyncHandler(async (req, res) => {
-//   try {
-//     const users = await User.find()
-//       .sort({ pushupCount: -1 }) // Sorting by pushupCount (highest first)
-//       .limit(5)
-//       .select("username pushupCount personalBest level avatar");
-
-//     // Ensuring order remains correct
-//     const sortedUsers = users
-//       .map(user => ({
-//         username: user.username,
-//         total_pushups: user.pushupCount, // Ensuring correct field name
-//         personal_best: user.personalBest,
-//         level: user.level,
-//         avatar: user.avatar
-//       }))
-//       .sort((a, b) => b.total_pushups - a.total_pushups); // Final check for sorting
-
-//     res.status(200).json({
-//       success: true,
-//       message: "Top users retrieved successfully",
-//       data: sortedUsers, // Sending sorted data
-//     });
-//   } catch (error) {
-//     res.status(500).json({
-//       success: false,
-//       message: "Error retrieving leaderboard",
-//       error: error.message,
-//     });
-//   }
-// });
 const getLeaderboard = asyncHandler(async (req, res) => {
   try {
     const users = await User.find()
-      .sort({ pushupCount: -1, personalBest: -1, createdAt: -1 }) // Sorting priority
+      .sort({ pushupCount: -1, personalBest: -1, createdAt: -1 }) 
       .limit(5)
-      .select("username pushupCount personalBest level avatar createdAt"); // Include createdAt for sorting
+      .select("username pushupCount personalBest level avatar createdAt"); 
 
-    // Formatting response
     const sortedUsers = users.map(user => ({
       username: user.username,
       total_pushups: user.pushupCount,
@@ -272,7 +232,5 @@ const getLeaderboard = asyncHandler(async (req, res) => {
     });
   }
 });
-
-
 
 export {register, changePassword, trackPushups, getProfile, updateAvatar, getUserStats, getLeaderboard };

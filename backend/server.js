@@ -1,8 +1,8 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import http from "http"; // Import HTTP module
-import { Server } from "socket.io"; // Import Socket.IO
+import http from "http"; 
+import { Server } from "socket.io"; 
 
 import connectDB from "./database/db.js";
 import userRoutes from "./routes/user.route.js";
@@ -12,10 +12,10 @@ dotenv.config();
 connectDB();
 
 const app = express();
-const server = http.createServer(app); // Create an HTTP server
+const server = http.createServer(app); 
 const io = new Server(server, {
   cors: {
-    origin: process.env.FRONTEND_URL, // Allow frontend to connect
+    origin: process.env.FRONTEND_URL, 
     credentials: true,
   },
 });
@@ -28,12 +28,6 @@ app.use(
 );
 app.use(express.json());
 
-
-// **Default Route**
-app.get("/", (req, res) => {
-  res.json({ message: "Backend is running!" });
-});
-
 // **Socket.IO Connection**
 io.on("connection", (socket) => {
   console.log(`New client connected: ${socket.id}`);
@@ -43,7 +37,6 @@ io.on("connection", (socket) => {
   });
 });
 
-// **Use Routes**
 app.use("/api/user", userRoutes);
 app.use("/api/auth", authRoutes);
 
