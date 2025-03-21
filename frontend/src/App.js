@@ -35,7 +35,7 @@ const App = () => {
           <Route path="/dashboard" element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />} />
           <Route path="/profile" element={isAuthenticated ? <Profile /> : <Navigate to="/login" />} />
           <Route path="/track" element={isAuthenticated ? <PushupCounter /> : <Navigate to="/login" />} />
-          <Route path="/leaderboard" element={isAuthenticated ? <Leaderboard /> : <Navigate to="/login" />} /> {/* ✅ Leaderboard Route */}
+          <Route path="/leaderboard" element={isAuthenticated ? <Leaderboard /> : <Navigate to="/login" />} /> 
           <Route path="/logout" element={isAuthenticated ? <Logout setIsAuthenticated={setIsAuthenticated} /> : <Navigate to="/login" />} />
           
           {/* Redirect all unknown routes to login */}
