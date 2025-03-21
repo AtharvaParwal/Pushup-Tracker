@@ -31,14 +31,14 @@ A real-time push-up tracking web application that utilizes **MERN stack** for fr
 ---
 
 ## **📂 Project Structure**
-```
-/pushup-tracker
+```bash
+pushup-tracker/
 │── backend/            # Node.js Backend
 │── frontend/           # React.js Frontend
 │── python-server/      # Flask Server (Push-up detection)
 │── docker-compose.yml  # Docker configuration
 │── README.md           # Project Documentation
-```
+
 
 ---
 
@@ -172,10 +172,6 @@ python server.py
 ## **📌 Contributing**
 Feel free to fork the repository and submit pull requests.
 
----
-
-## **📩 Contact**
-For any queries, reach out via GitHub Issues.
 
 ---
 ```
