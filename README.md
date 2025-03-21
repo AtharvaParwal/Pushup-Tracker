@@ -31,20 +31,42 @@ A real-time push-up tracking web application that utilizes **MERN stack** for fr
 ---
 
 ## **📂 Project Structure**
-```bash
+```
 pushup-tracker/
-│── backend/            # Node.js Backend
-│── frontend/           # React.js Frontend
-│── python-server/      # Flask Server (Push-up detection)
-│── docker-compose.yml  # Docker configuration
-│── README.md           # Project Documentation
-
+│── backend/                # Node.js Backend
+│   │── controllers/        # Request handlers
+│   │── middleware/         # Middleware functions
+│   │── models/            # Mongoose Models
+│   │── routes/            # API Routes
+│   │── utils/             # Utility functions
+│   │── .env               # Environment variables
+│   │── server.js          # Entry point
+│
+│── frontend/               # React.js Frontend
+│   │── src/
+│   │   │── components/    # Reusable UI components
+│   │   │── pages/         # React Pages
+│   │   │── services/      # API calls
+│   │   │── App.js        # Main App Component
+│   │── .env               # Environment variables
+│
+│── python-server/          # Flask Server (Push-up detection)
+│   │── models/            # ML/Detection models
+│   │── utils/             # Helper functions
+│   │── server.py          # Main Flask server
+│   │── requirements.txt   # Dependencies
+│   │── .env               # Environment variables
+│
+│── docker-compose.yml      # Docker configuration
+│── README.md               # Project Documentation
+```
 
 ---
 
 ## **🛠️ Installation & Setup**
 
 ### **🔹 1️⃣ Clone the Repository**
+First, clone the repository and navigate to the project directory:
 ```sh
 git clone https://github.com/your-username/pushup-tracker.git
 cd pushup-tracker
@@ -52,18 +74,18 @@ cd pushup-tracker
 
 ---
 
-## **🔹 2️⃣ Backend Setup**
-### **📌 Navigate to Backend**
+### **🔹 2️⃣ Backend Setup**
+#### **📌 Navigate to Backend**
 ```sh
 cd backend
 ```
 
-### **📌 Install Dependencies**
+#### **📌 Install Dependencies**
 ```sh
 npm install
 ```
 
-### **📌 Configure `.env` File**
+#### **📌 Configure `.env` File**
 Create a `.env` file inside the **backend** folder and add:
 ```env
 # Server Port
@@ -89,65 +111,65 @@ DEFAULT_AVATAR=https://res.cloudinary.com/dcrlrz4mm/image/upload/v1741676564/you
 # CORS Configuration
 FRONTEND_URL=http://localhost:3000  # Or Railway frontend URL after deployment
 ```
-Replace `<your_password>` with the actual **MongoDB password** from Railway.
+> Replace `<your_password>` with the actual **MongoDB password** from Railway.
 
-### **📌 Start the Backend Server**
+#### **📌 Start the Backend Server**
 ```sh
 npm start
 ```
 
 ---
 
-## **🔹 3️⃣ Frontend Setup**
-### **📌 Navigate to Frontend**
+### **🔹 3️⃣ Frontend Setup**
+#### **📌 Navigate to Frontend**
 ```sh
 cd ../frontend
 ```
 
-### **📌 Install Dependencies**
+#### **📌 Install Dependencies**
 ```sh
 npm install
 ```
 
-### **📌 Configure `.env` File**
+#### **📌 Configure `.env` File**
 Create a `.env` file inside the **frontend** folder and add:
 ```env
 REACT_APP_BACKEND_URL=http://localhost:5000
 REACT_APP_PYTHON_URL=http://localhost:5001
 ```
-### **📌 Start the Frontend Server**
+#### **📌 Start the Frontend Server**
 ```sh
 npm start
 ```
 
 ---
 
-## **🔹 4️⃣ Python Server Setup**
-### **📌 Navigate to Python Server**
+### **🔹 4️⃣ Python Server Setup**
+#### **📌 Navigate to Python Server**
 ```sh
 cd ../python-server
 ```
 
-### **📌 Create & Activate Virtual Environment**
+#### **📌 Create & Activate Virtual Environment**
 ```sh
 python -m venv venv
 source venv/bin/activate  # MacOS/Linux
 venv\Scripts\activate     # Windows
 ```
 
-### **📌 Install Dependencies**
+#### **📌 Install Dependencies**
 ```sh
 pip install -r requirements.txt
 ```
 
-### **📌 Configure `.env` File**
+#### **📌 Configure `.env` File**
 Create a `.env` file inside the **python-server** folder and add:
 ```env
 PORT=5001
 FRONTEND_URL=http://localhost:3000  # Or Railway frontend URL after deployment
 ```
 
-### **📌 Start the Python Server**
+#### **📌 Start the Python Server**
 ```sh
 python server.py
 ```
@@ -171,7 +193,4 @@ python server.py
 
 ## **📌 Contributing**
 Feel free to fork the repository and submit pull requests.
-
-
----
 ```
