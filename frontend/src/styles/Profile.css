@@ -1,12 +1,10 @@
-/* Ensure the full background is the gradient */
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  background: linear-gradient(to right, #2ecc71, #3498db); /* Same BG as before */
+  background: linear-gradient(to right, #2ecc71, #3498db); 
 }
 
-/* Centered Profile Container */
 .profile-container {
   display: flex;
   justify-content: center;
@@ -15,9 +13,8 @@ body, html {
   padding: 20px;
 }
 
-/* Profile Card */
 .profile-details {
-  background-color: #ffffff; /* White only inside the card */
+  background-color: #ffffff; 
   padding: 40px;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -25,7 +22,6 @@ body, html {
   text-align: center;
 }
 
-/* Profile Title */
 .profile-title {
   font-size: 28px;
   font-weight: bold;
@@ -33,7 +29,6 @@ body, html {
   color: #333333;
 }
 
-/* Avatar Styling */
 .avatar {
   width: 160px;
   height: 160px;
@@ -42,7 +37,6 @@ body, html {
   object-fit: cover;
 }
 
-/* Profile text styling */
 .profile-details p {
   font-size: 18px;
   margin: 12px 0;
@@ -54,7 +48,6 @@ body, html {
   font-weight: bold;
 }
 
-/* Error Message Styling */
 .error-message {
   color: #ff0000;
   text-align: center;

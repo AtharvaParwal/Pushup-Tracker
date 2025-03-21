@@ -19,7 +19,7 @@ const ChangePassword = () => {
       const BASE_URL = process.env.REACT_APP_BACKEND_URL; 
       const res = await axios.put(`${BASE_URL}/api/user/change-password`, formData, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`, // Pass token for authentication
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
           "Content-Type": "application/json",
         },
         withCredentials: true, // Ensures cookies (if used) are sent

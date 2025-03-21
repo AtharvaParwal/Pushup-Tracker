@@ -1,11 +1,9 @@
-/* PushupCounter.css */
 html, body {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  /* background-color: #dac341 !important; Gold Yellow Background */
   background:radial-gradient(circle,rgb(214, 214, 64),rgb(37, 220, 123));
 }
 
@@ -14,18 +12,16 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Full screen height */
-  width: 100vw; /* Full screen width */
-  /* background-color: #e1cc53 !important; Ensure Yellow Background */
+  height: 100vh; 
+  width: 100vw; 
   background:radial-gradient(circle,rgb(214, 214, 64),rgb(37, 220, 123));
   padding: 0;
   margin: 0;
-  position: absolute; /* Ensures it covers the full page */
+  position: absolute; 
   top: 0;
   left: 0;
 }
 
-/* Video Container */
 .video-container {
   width: 85%;
   max-width: 900px;
@@ -45,7 +41,6 @@ html, body {
   object-fit: cover;
 }
 
-/* Stats Container */
 .stats {
   background-color: #ffffff;
   padding: 25px;
@@ -60,14 +55,12 @@ html, body {
   gap: 20px;
 }
 
-/* Stat Text */
 .stats p {
   font-size: 20px;
   font-weight: bold;
   color: #111111;
 }
 
-/* Buttons */
 .buttons {
   display: flex;
   gap: 20px;
@@ -101,7 +94,6 @@ html, body {
 }
 
 
-/* Prevent Scrolling */
 * {
   box-sizing: border-box;
 }

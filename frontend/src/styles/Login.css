@@ -1,6 +1,5 @@
-/* Centering the login container and setting a background color */
 body {
-  background-color: #f4f6f9; /* Light grayish-blue background */
+  background-color: #f4f6f9; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,22 +7,20 @@ body {
   margin: 0;
 }
 
-/* Login container styling */
 .login-container {
   width: 400px;
   padding: 25px;
-  background-color: #ffffff; /* White background for contrast */
+  background-color: #ffffff; 
   border-radius: 8px;
-  border: 2px solid black; /* Black border */
+  border: 2px solid black; 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-/* Form fields */
 .form-group {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align items to the left */
+  align-items: flex-start; 
   margin-bottom: 15px;
   width: 100%;
 }
@@ -41,7 +38,6 @@ body {
   box-sizing: border-box;
 }
 
-/* Login button styling */
 .login-button {
   width: 100%;
   padding: 10px;
@@ -58,13 +54,11 @@ body {
   background-color: #0056b3;
 }
 
-/* Error message */
 .error-message {
   color: red;
   margin-bottom: 15px;
 }
 
-/* Centering text links */
 p {
   margin-top: 15px;
 }

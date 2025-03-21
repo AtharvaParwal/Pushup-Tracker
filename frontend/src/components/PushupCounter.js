@@ -4,10 +4,7 @@ import io from "socket.io-client";
 import axios from "axios";
 import "../styles/PushupCounter.css";
 
-// Connect to the Python server
-// const socket = io("http://localhost:5001", {
-//   transports: ["websocket"], // Force WebSocket transport
-// });
+
 const PYTHON_SERVER_URL = process.env.REACT_APP_PYTHON_SERVER_URL;
 
 const socket = io(PYTHON_SERVER_URL, {
@@ -15,9 +12,8 @@ const socket = io(PYTHON_SERVER_URL, {
 });
 
 
-const BASE_URL = process.env.REACT_APP_BACKEND_URL;  // Load from .env
+const BASE_URL = process.env.REACT_APP_BACKEND_URL;  
 
-// Define calculateLevel function in the frontend
 const calculateLevel = (totalPushups) => {
   const levels = [
     [115000, 50], [113000, 49], [112000, 48], [111000, 47], [105000, 46],

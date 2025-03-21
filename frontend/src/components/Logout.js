@@ -22,8 +22,8 @@ const Logout = ({ setIsAuthenticated }) => {
   };
 
   return (
-    <div className="logout-wrapper"> {/* Outer wrapper to center the content */}
-      <div className="logout-container"> {/* White container */}
+    <div className="logout-wrapper"> 
+      <div className="logout-container"> 
         <h2>Are you sure you want to logout?</h2>
         <div className="buttons">
           <button onClick={handleLogout}>Yes</button>

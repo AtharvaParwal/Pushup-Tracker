@@ -1,27 +1,23 @@
-/* Full screen background, keeping App.css background */
 .dashboard-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full height */
+  height: 100vh; 
 }
 
-/* White container for Dashboard */
 .dashboard-container {
   background-color: white;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: 400px; /* Fixed width for the container */
+  width: 400px; 
 }
 
-/* Heading styling */
 .dashboard-container h1 {
   margin-bottom: 20px;
 }
 
-/* Button styling */
 .buttons {
   display: flex;
   flex-direction: column;

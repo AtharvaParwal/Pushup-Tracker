@@ -6,7 +6,7 @@ import Dashboard from "./components/Dashboard";
 import Profile from "./components/Profile";
 import PushupCounter from "./components/PushupCounter";
 import Logout from "./components/Logout";
-import Leaderboard from "./components/Leaderboard"; // Import Leaderboard Component
+import Leaderboard from "./components/Leaderboard"; 
 
 import "./App.css";
 

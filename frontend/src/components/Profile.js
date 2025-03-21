@@ -10,7 +10,7 @@ const Profile = () => {
     const fetchProfile = async () => {
       try {
         const token = localStorage.getItem("token");
-        const BASE_URL = process.env.REACT_APP_BACKEND_URL;  // Load from .env
+        const BASE_URL = process.env.REACT_APP_BACKEND_URL;  
         const res = await axios.get(`${BASE_URL}/api/user/profile`, {
           headers: { Authorization: `Bearer ${token}` },
         });
@@ -34,7 +34,7 @@ const Profile = () => {
   return (
     <div className="profile-container">
       <div className="profile-details">
-        <h2 className="profile-title">Profile</h2> {/* Centered Profile Title */}
+        <h2 className="profile-title">Profile</h2> 
         {user.avatar && <img src={user.avatar} alt="Avatar" className="avatar" />}
         <p><strong>Username:</strong> {user.username}</p>
         <p><strong>Total Pushups:</strong> {user.pushupCount}</p>

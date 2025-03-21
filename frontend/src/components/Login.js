@@ -12,10 +12,9 @@ const Login = ({ setIsAuthenticated }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const BASE_URL = process.env.REACT_APP_BACKEND_URL;  // Load from .env
+      const BASE_URL = process.env.REACT_APP_BACKEND_URL;  
       const res = await axios.post(`${BASE_URL}/api/auth/login`, { email, password });
 
-      // Check if the response contains the access token
       if (res.data.data?.accessToken) {
         localStorage.setItem("token", res.data.data.accessToken);
         // console.log("Token saved to localStorage:", res.data.data.accessToken);

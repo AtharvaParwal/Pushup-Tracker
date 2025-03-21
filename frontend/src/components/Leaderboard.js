@@ -10,13 +10,13 @@ const Leaderboard = () => {
   useEffect(() => {
     const fetchLeaderboard = async () => {
       try {
-        const token = localStorage.getItem("token"); // Ensure token is included for authentication if required
-        const BASE_URL = process.env.REACT_APP_BACKEND_URL;  // Load from .env
+        const token = localStorage.getItem("token"); 
+        const BASE_URL = process.env.REACT_APP_BACKEND_URL;  
         const response = await axios.get(`${BASE_URL}/api/user/leaderboard`, {
-          headers: { Authorization: `Bearer ${token}` }, // Send token if needed
+          headers: { Authorization: `Bearer ${token}` },
         });
 
-        console.log("Leaderboard Data:", response.data); // Debugging
+        // console.log("Leaderboard Data:", response.data); // Debugging
 
         if (response.data.success) {
           setUsers(response.data.data); // Ensure we access the correct key from response
