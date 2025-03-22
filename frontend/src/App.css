@@ -1,7 +1,9 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background:radial-gradient(circle,rgb(101, 64, 214),rgb(0, 255, 119));
+  /* background-color: #b8c6af; */
+  background-color: #B8C6AF;
+  /* background:radial-gradient(circle,rgb(221, 218, 230),rgb(174, 239, 204)); */
 }
 
 .app-container {
