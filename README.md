@@ -164,12 +164,6 @@ python server.py
 
 ---  
 
-## **🚀 Deployment**  
-- **Containerized with Docker**  
-- **Database hosted on Railway (MongoDB)**  
-- **Frontend, Backend, and Python server can be deployed separately**  
-
----  
 
 ## **📌 Contributing**  
 Feel free to fork the repository and submit pull requests.  
