@@ -44,7 +44,7 @@ pushup-tracker/
 
 ### **🔹 1️⃣ Clone the Repository**  
 ```sh
-git clone https://github.com/your-username/pushup-tracker.git  
+git clone https://github.com/AtharvaParwal/pushup-tracker.git  
 cd pushup-tracker  
 ```  
 
@@ -69,7 +69,7 @@ Create a `.env` file inside the **backend** folder and add:
 PORT=5000  
 
 # MongoDB Connection  
-MONGO_URI=mongodb://mongo:<your_password>@mainline.proxy.rlwy.net:5947/pushup_db  
+MONGO_URI=your_mongo_uri  
 
 # Cloudinary Configuration  
 CLOUDINARY_CLOUD_NAME=your_cloudinary_name  
@@ -88,7 +88,6 @@ DEFAULT_AVATAR=https://res.cloudinary.com/dcrlrz4mm/image/upload/v1741676564/you
 # CORS Configuration  
 FRONTEND_URL=http://localhost:3000  # Or Railway frontend URL after deployment  
 ```  
-Replace `<your_password>` with the actual **MongoDB password** from Railway.  
 
 ### **📌 Start the Backend Server**  
 ```sh
