@@ -112,7 +112,7 @@ npm install
 Create a `.env` file inside the **frontend** folder and add:  
 ```env
 REACT_APP_BACKEND_URL=http://localhost:5000  
-REACT_APP_PYTHON_URL=http://localhost:5001  
+REACT_APP_PYTHON_SERVER_URL=http://localhost:5001  
 ```  
 
 ### **📌 Start the Frontend Server**  
